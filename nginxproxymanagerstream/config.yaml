@@ -1,0 +1,23 @@
+name: Nginx Proxy Manager - With Stream
+version: 1e0485e
+slug: nginxproxymanagerstream
+description: Manage Nginx proxy hosts with a simple, powerful interface
+url: https://github.com/shambala001/addon-nginx-proxy-manager-with-stream
+codenotary: codenotary@frenck.dev
+webui: http://[HOST]:[PORT:81]
+init: false
+arch:
+- aarch64
+- amd64
+- armv7
+hassio_api: true
+ports:
+  80/tcp: 80
+  81/tcp: 81
+  443/tcp: 443
+  8843/tcp: 8843
+map:
+- addon_config:rw
+backup_exclude:
+- '*/logs'
+image: ghcr.io/shambala001/nginxproxymanagerstream/{arch}
